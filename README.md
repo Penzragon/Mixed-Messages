@@ -28,7 +28,7 @@ List of features ready and TODOs for future development
 
 To-do list:
 
-- Finish the program.
+- ~Finish the program.~
 - Make a web version.
 
 ## Status
