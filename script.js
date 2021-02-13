@@ -1,6 +1,6 @@
 const tarot = {
   _cards: {
-    name: [
+    names: [
       "The Fool",
       "Magician",
       "High Priestess",
@@ -24,7 +24,7 @@ const tarot = {
       "Judgment",
       "World",
     ],
-    description: [
+    descriptions: [
       "Beginnings",
       "Power, Action",
       "Mystery, Intuition",
@@ -49,4 +49,21 @@ const tarot = {
       "Completion, Travel",
     ],
   },
+  get cards() {
+    return this._cards;
+  },
+  get names() {
+    return this._cards.names;
+  },
+  get descriptions() {
+    return this._cards.descriptions;
+  },
 };
+
+const randomNumber = Math.floor(Math.random() * tarot.names.length - 1);
+
+console.log("Wellcome, to tarot card picker");
+console.log(`Your card is ${tarot.names[randomNumber]}.`);
+console.log(
+  `${tarot.names[randomNumber]} card means '${tarot.descriptions[randomNumber]}'.`
+);
